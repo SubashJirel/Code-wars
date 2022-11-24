@@ -1,8 +1,8 @@
 let students = [
-    { name: 'Vivek', scores: [95, 90, 90, 91] },
-    { name: 'Akshat', scores: [90, 80, 80, 60] },
-    { name: 'Arnav', scores: [70, 60, 90, 90] },
-    { name: 'Pawan', scores: [80, 90, 90, 70] }
+    { name: 'Robin', scores: [95, 90, 90, 91] },
+    { name: 'James', scores: [90, 80, 80, 60] },
+    { name: 'Harry', scores: [70, 60, 90, 90] },
+    { name: 'Pogba', scores: [80, 90, 90, 70] }
     ];
     
     //To calculate the grade obtained by the student look at below explanation.
@@ -14,8 +14,8 @@ let students = [
 
     /*
     Task1 : Calculate the grade based on the average score of each student and print it. for eg.
-             Vivek A
-             Akshat B
+             Robin A
+             James B
     Task2 : Add 'grade' as the new property to each student object and store the value of the calculated grade into it.
     Task3 : Print the minimum and maximum average score
     */
