@@ -18,3 +18,7 @@ function lostSheep(friday,saturday,total){
   }
   
   console.log(lostSheep([5,1,4],[5,4],29))
+
+  //Other code
+  const lostSheep2 = (friday, saturday, total) =>
+  [...friday, ...saturday].reduce((acc, n) => acc - n, total); //here acc has total values and we are subtracting each returned sheep
