@@ -36,7 +36,7 @@ function persistence(num) {
     
     while (num.length > 1) {
       times++;
-      num = num.split('').map(Number).reduce((a, b) => a * b).toString();
+      num = num.split('').map(Number).reduce((a, b) => a * b).toString(); //will work if we don't .map(Number)
     }
     
     return times;
