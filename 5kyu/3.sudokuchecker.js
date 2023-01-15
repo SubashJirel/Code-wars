@@ -37,9 +37,10 @@ function doneOrNot(board){
       for(let i=0; i<9; i+=3) {
         for(let j=0;j<9;j+=3) {
           let subGrid3X3 = [...board[i].slice(j,j+3), ...board[i+1].slice(j,j+3), ...board[i+2].slice(j,j+3)]
+          //this also worlks:board3X3 = [...board[j].slice(i,i+3), ...board[j+1].slice(i,i+3), ...board[j+2].slice(i,i+3)]
           let isItUnique = new Set(subGrid3X3)
           if(isItUnique.size !=9) {
-            return "Try again!"
+            return "Try again! 3X3 grid has duplicates"
           }
           
         }
@@ -57,6 +58,18 @@ function doneOrNot(board){
         }
         //console.log(board.reduce((acc,curr) => acc+curr[i],0))
       }
+      /*
+      checking column same as above
+      for(let i =0; i<board.length;i++) {
+      let sum = 0
+      for (let j=0;j<board.length;j++) {
+        sum+=board[j][i]
+      }
+      if(sum!=45) {
+        return false
+      }
+    }
+      */
       return "Finished!"
 
   }

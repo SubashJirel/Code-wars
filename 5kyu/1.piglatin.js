@@ -11,8 +11,16 @@ function pigIt(str){
   
     return strArr.join(' ')
   }
-  
-  
+  //same code bu using for loop 
+  function pigIt_for_loop(word) {
+    let strArr = word.split(' ')
+    for(let i=0; i<strArr.length;i++) {
+      if(/[a-zA-Z]/.test(strArr[i])) {
+        strArr[i] = strArr[i].slice(1,) + strArr[i][0] + 'ay'
+      }
+    }
+    console.log(strArr.join(' '))
+  }
   
   console.log(pigIt('Pig latin is cool !'))
 
