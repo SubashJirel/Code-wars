@@ -7,34 +7,36 @@ CIPHERSFUNDAMENTALS
 */
 
 function rot13(message){
-    //your code here
-    let aplhabets ="abcdefghijklmnopqrstuvwxyz"
-    let capital = aplhabets.toLocaleUpperCase()
-    let msgArr = message.split('')
-    return msgArr.map(val => {
-      if(aplhabets.includes(val)) {
-        let index = aplhabets.indexOf(val)
-        let rot13Position = Math.floor((index+13)%26)
-        return aplhabets[rot13Position]
-      }
-      else if(capital.includes(val)) {
-        let index = capital.indexOf(val)
-        let rot13Position = Math.floor((index+13)%26)
-        return capital[rot13Position]
-      }
-      else {
-        return val
-      }
-      
-    }).join('')
-    
-  }
+  //your code here
+  let aplhabets ="abcdefghijklmnopqrstuvwxyz"
+  let capital = aplhabets.toLocaleUpperCase()
+  let msgArr = message.split('')
   
+  let resultArr = msgArr.map(val => {
+    if(aplhabets.includes(val)) {
+      let index = aplhabets.indexOf(val)
+      let rot13Position = Math.floor((index+13)%26)
+      return aplhabets[rot13Position]
+    }
+    else if(capital.includes(val)) {
+      let index = capital.indexOf(val)
+      let rot13Position = Math.floor((index+13)%26)
+      return capital[rot13Position]
+    }
+    else {
+      return val
+    }
+    
+  })
+  return resultArr.join('')
+  
+}
   console.log(rot13('abcdefghijklmnopqrstuvwxyz'))
-  //nopqrstuvwxyzabcdefghijklm
+ 
+   //nopqrstuvwxyzabcdefghijklm
   //nopqrstuvwxyzabcdefghijklm
   //using regex
-  function rot13(message) {
+  function rot13_other(message) {
     var a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     var b = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
     return message.replace(/[a-z]/gi, c => b[a.indexOf(c)])
