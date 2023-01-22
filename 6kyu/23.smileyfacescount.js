@@ -24,6 +24,15 @@ function countSmileys(arr) {
     if(matches === null) return 0;
     return matches.length
   }
+  //explanation
+  /*
+  The square brackets [] define a character set, so the expression will match any of the characters within the brackets.
+The : and ; are placed inside the brackets, so the expression will match either of those characters.
+The - and ~ are also placed inside the brackets, so the expression will match either of those characters as well.
+The ? following the - and ~ characters makes the preceding character optional, so the expression will match any emoticon that has either -, ~ or none of them.
+The last )D inside the brackets define the last two characters of the emoticon, so the expression will match either of them and thus complete the emoticon.
+The g flag at the end makes the search global, so it will find all matches in the input string, rather than stopping after the first match.
+  */
 
   //other
   function countSmileys(arr) {
