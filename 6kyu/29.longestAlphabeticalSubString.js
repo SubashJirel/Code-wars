@@ -24,7 +24,7 @@ function longest(str) {
   console.log(longest('asdfaaaabbbbcttavvfffffdf'))
 
   //another faster code
-  function longest(str) {
+  function longest_other(str) {
     let max = 0;
     let cur = 0;
     let pos = 0;
