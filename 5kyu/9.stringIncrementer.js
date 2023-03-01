@@ -24,7 +24,7 @@ function incrementString (str) {
     if(!regNum.test(str)) {
       return str+1
     }
-    let lastNum = str.match(regNum)[0]
+    let lastNum = str.match(regNum)[0]//if we used g in  let regNum = /[0-9]+$/g then we would just get single elem array
     let increasedNum = (Number(lastNum) + 1).toString().padStart(lastNum.length, '0')//padStart for strings like foobar001, we want to make it foobar002 not foobar2
     return str.replace(regNum,increasedNum)
 
