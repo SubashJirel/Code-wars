@@ -52,7 +52,7 @@ function stockList(listOfArt, listOfCat) {
 
   listOfArt.forEach(function (art) {
     var cat = art[0];
-    qs[cat] = (qs[cat] | 0) + +art.split(' ')[1];
+    qs[cat] = (qs[cat] | 0) + +art.split(' ')[1]; // the second + is to make the string to number
   });
 
   return listOfCat
