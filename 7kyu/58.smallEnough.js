@@ -11,4 +11,3 @@ function smallEnough(a, limit) {
 function smallEnough(a, limit) {
   return Math.max(...a) <= limit;
 }
-$('slector').action();
