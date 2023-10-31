@@ -34,3 +34,14 @@ var encryptThis = function (text) {
     .join(' ');
 };
 console.log(encryptThis('I think therefore I am'));
+
+//other code
+const encryptThis = (text) =>
+  text
+    .split(' ')
+    .map((word) =>
+      word
+        .replace(/(^\w)(\w)(\w*)(\w$)/, `$1$4$3$2`)
+        .replace(/^\w/, word.charCodeAt(0))
+    )
+    .join(' ');
